@@ -1,6 +1,6 @@
 package guillotine.vo;
 
-public class VoteVo {
+public class Vote {
 	protected int voteNo;
 	protected String date;
 	protected String candiDate;

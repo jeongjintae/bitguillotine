@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="guillotine.VoteDao">
+  	<resultMap type="member" id="memberResultMap">
+    <id     property="vno"       column="VNO"/>
+    <result property="vdate"     column="VDATE"/>
+    <result property="can"      column="CANDIDATE"/>
+    <result property="ele"      column="ELETOR"/>
+    <result property="mno"      column="MNO"/>
+  </resultMap>
+  
+  
+  <select id="selectList" resultMap="voteResultMap">
+		select VNO,VDATAE,CANDIDATE,ELETOR
+		from VOTES
+	</select>
+	
+	<insert id="insert" parameterType="vote">
+    INSERT INTO MEMBERS(VNO,VDATAE,CANDIDATE,ELETOR) 
+    VALUES(#{vno},#{vdate},#{can},#{ele})
+  </insert>
+  
+<!--   <update id="update" parameterType="vote"> -->
+<!--     update VOTES set  -->
+<!--       MNAME=#{name}, -->
+<!--       EMAIL=#{email}, -->
+<!--       TEL=#{tel}, -->
+<!--       AGE=#{age}, -->
+<!--       PHOTO=#{photo}  -->
+<!--     where VNO=#{no} -->
+<!--   </update> -->
+	
+ 
+  </mapper>

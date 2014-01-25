@@ -19,7 +19,7 @@ public class VoteDao {
 	public List<VoteDao> selectList() throws Exception{
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
-			return sqlSession.selectList("spms.dao.MemberDao.selectList");
+			return sqlSession.selectList("guillotine.dao.VoteDao.selectList");
 		} finally {
 			sqlSession.close();
 		}
@@ -28,7 +28,7 @@ public class VoteDao {
 	public int insert(VoteDao voteDao) throws Exception {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
-			int count = sqlSession.insert("spms.dao.MemberDao.insert", voteDao);
+			int count = sqlSession.insert("guillotine.dao.VoteDao.insert", voteDao);
 			sqlSession.commit();
 			
 			return count;
@@ -40,7 +40,7 @@ public class VoteDao {
 	public int update(VoteDao voteDao) throws Exception {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
-			int count = sqlSession.update("spms.dao.MemberDao.update", voteDao);
+			int count = sqlSession.update("guillotine.dao.VoteDao.update", voteDao);
 			sqlSession.commit();
 			
 			return count;
