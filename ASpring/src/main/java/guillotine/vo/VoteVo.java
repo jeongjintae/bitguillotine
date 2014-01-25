@@ -1,4 +1,4 @@
-package guillotine;
+package guillotine.vo;
 
 public class VoteVo {
 	protected int voteNo;

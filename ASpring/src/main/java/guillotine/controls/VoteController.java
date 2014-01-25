@@ -1,4 +1,4 @@
-package guillotine;
+package guillotine.controls;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
